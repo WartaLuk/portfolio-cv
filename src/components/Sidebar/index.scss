@@ -12,15 +12,40 @@
   .logo {
     display: block;
     padding: 8px 1px;
-    img {
+    div {
       display: block;
       margin: 8px auto;
       width: 70%;
       height: auto;
-
-      &.sub-logo {
+      &.logo-title {
+        position: absolute;
+        margin-top: 8%;
+        color: hsl(180, 80%, 40%);
+        h6 {
+            position: relative;
+            display: inline;
+            text-decoration: none;
+            &:first-of-type {
+                z-index: 2;
+                display: none;
+            }
+            &:nth-last-child(2){
+                color: hsl(180,60%, 30%);
+                // margin: -25px;
+                &:hover {
+                    color: hsl(180, 80%, 40%);
+                }
+            }
+            &last-child {
+                margin: -24px;
+            }
+        }
+      }
+      &.logo-subtitle {
         width: 70%;
         margin-top: 9px;
+        content: "Łukasz <br/>Wartałowicz";
+        color: hsl(180, 100%, 92%);
       }
     }
   }
@@ -81,8 +106,10 @@
         }
     }
     &:last-child {
+        margin-top: 5%;
         &:after {
             content: "GITHUB";
+            text-decoration: underline;
         }
     }
     &.active {

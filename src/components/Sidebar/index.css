@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .nav-bar {
   background: linear-gradient(to right, #242424, #333333 5%, #242424 6%, #333333 95%);
   width: 10vw;
@@ -15,16 +16,47 @@
   padding: 8px 1px;
 }
 
-.nav-bar .logo img {
+.nav-bar .logo div {
   display: block;
   margin: 8px auto;
   width: 70%;
   height: auto;
 }
 
-.nav-bar .logo img.sub-logo {
+.nav-bar .logo div.logo-title {
+  position: absolute;
+  margin-top: 8%;
+  color: #14b8b8;
+}
+
+.nav-bar .logo div.logo-title h6 {
+  position: relative;
+  display: inline;
+  text-decoration: none;
+}
+
+.nav-bar .logo div.logo-title h6:first-of-type {
+  z-index: 2;
+  display: none;
+}
+
+.nav-bar .logo div.logo-title h6:nth-last-child(2) {
+  color: #1f7a7a;
+}
+
+.nav-bar .logo div.logo-title h6:nth-last-child(2):hover {
+  color: #14b8b8;
+}
+
+.nav-bar .logo div.logo-title h6last-child {
+  margin: -24px;
+}
+
+.nav-bar .logo div.logo-subtitle {
   width: 70%;
   margin-top: 9px;
+  content: "Łukasz <br/>Wartałowicz";
+  color: #d6ffff;
 }
 
 .nav-bar nav {
@@ -87,8 +119,13 @@
   content: "CONTACT";
 }
 
+.nav-bar nav a:last-child {
+  margin-top: 5%;
+}
+
 .nav-bar nav a:last-child:after {
   content: "GITHUB";
+  text-decoration: underline;
 }
 
 .nav-bar nav a.active svg {

@@ -3,12 +3,14 @@
   height: 100%;
   position: absolute;
 }
+
 .top-tags {
   bottom: auto;
   top: 35px;
 }
+
 .tags {
-  color: hsl(180, 100%, 60%);
+  color: #33ffff;
   opacity: 0.7;
   position: absolute;
   bottom: 0;
@@ -18,5 +20,5 @@
 }
 
 .bottom-tag-html {
-    margin-left: -22px;
+  margin-left: -22px;
 }

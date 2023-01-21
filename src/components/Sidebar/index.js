@@ -8,26 +8,47 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-
 const Sidebar = () => (
   <div className="nav-bar">
     <Link className="logo" to="/">
-    <img src={LogoS} alt="logo"/>
-    <img className="sub-logo" src={LogoSubtitle} alt="logo subtitle"/>
+      <div className="logo-title">
+        <h6>Ł</h6>
+        <h6>V</h6>
+        <h6>V</h6>
+      </div>
+      <div className="logo-subtitle" />
     </Link>
     <nav>
-        <NavLink exact="true" activeclassname="active" to="/">
-            <FontAwesomeIcon icon={faHome} color="hsl(0, 0%, 84%)"/>
-        </NavLink>
-        <NavLink exact="true" activeclassname="active" className="about-link" to="/about">
-            <FontAwesomeIcon icon={faUser} color="hsl(0, 0%, 84%)"/>
-        </NavLink>
-        <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
-            <FontAwesomeIcon icon={faEnvelope} color="hsl(0, 0%, 84%)"/>
-        </NavLink>
-        <a className='github-link' href="https://github.com/WartaLuk" target="_blank">
-            <FontAwesomeIcon icon={faGithub} color="hsl(330, 50%, 60%)" target='_blank'/>
-        </a>
+      <NavLink exact="true" activeclassname="active" to="/">
+        <FontAwesomeIcon icon={faHome} color="hsl(0, 0%, 84%)" />
+      </NavLink>
+      <NavLink
+        exact="true"
+        activeclassname="active"
+        className="about-link"
+        to="/about"
+      >
+        <FontAwesomeIcon icon={faUser} color="hsl(0, 0%, 84%)" />
+      </NavLink>
+      <NavLink
+        exact="true"
+        activeclassname="active"
+        className="contact-link"
+        to="/contact"
+      >
+        <FontAwesomeIcon icon={faEnvelope} color="hsl(0, 0%, 84%)" />
+      </NavLink>
+      <a
+        className="github-link"
+        href="https://github.com/WartaLuk"
+        target="_blank"
+      >
+        <FontAwesomeIcon
+          icon={faGithub}
+          color="hsl(330, 50%, 60%)"
+          target="_blank"
+        />
+      </a>
     </nav>
   </div>
 )
