@@ -1,6 +1,7 @@
 .nav-bar {
   background: linear-gradient(to right, #242424, #333333 5%, #242424 6%, #333333 95%);
   background-image: url("../../assets/images/navbar.png");
+  background-size: auto 100%;
   background-attachment: fixed;
   width: 10vw;
   height: 90%;
@@ -18,6 +19,7 @@
   margin-top: 0;
   width: 100%;
   height: auto;
+  border-radius: 35%;
 }
 
 .nav-bar nav {
@@ -34,7 +36,7 @@
 .nav-bar nav a {
   font-size: 23px;
   font-weight: 800;
-  color: #ffcd05;
+  color: #8f7e76;
   display: block;
   position: relative;
   text-decoration: none;
@@ -46,12 +48,12 @@
 }
 
 .nav-bar nav a:hover {
-  color: black;
+  color: #ff5805;
   text-shadow: 0 0 40px #333333;
 }
 
 .nav-bar nav a:hover svg {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .nav-bar nav a:hover::after {
@@ -69,7 +71,7 @@
   text-align: center;
   opacity: 0;
   transition: all 0.4s ease-out;
-  text-shadow: 1px 1px 4px #ffd633, -1px -1px 25px #ff7733, 0 0 12px #ffd633;
+  text-shadow: 1px 1px 4px #ffb433, -1px -1px 25px #ff7733, 0 0 12px #ffb433;
 }
 
 .nav-bar nav a:first-child::after {
@@ -95,5 +97,9 @@
 
 .nav-bar nav a.active svg {
   color: #ff5805;
+  border-style: solid double;
+  border-radius: 50%;
+  padding: 5px;
+  border-color: #ff4405;
   font-size: 150%;
 }

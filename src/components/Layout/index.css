@@ -14,11 +14,26 @@
   opacity: 0.7;
   position: absolute;
   bottom: 0;
-  left: 120px;
-  font-size: 19px;
+  left: 15%;
+  font-size: 24px;
   font-family: 'La Belle Aurore';
 }
 
 .bottom-tag-html {
   margin-left: -22px;
+}
+
+.container {
+  width: 100%;
+  will-change: contents;
+  height: 90%;
+  min-height: 570px;
+  position: absolute;
+  opacity: 0;
+  top: 5%;
+  margin: 0 auto;
+  z-index: 1;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
 }

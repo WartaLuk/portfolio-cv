@@ -1,6 +1,7 @@
 .nav-bar {
     background: linear-gradient(to right, hsl(0, 0%, 14%), hsl(0, 0%, 20%) 5%, hsl(0, 0%, 14%) 6%, hsl(0, 0%, 20%) 95%);
   background-image: url('../../assets/images/navbar.png');
+  background-size: auto 100%;
   background-attachment: fixed;
   width: 10vw;
   height: 90%;
@@ -10,6 +11,7 @@
   z-index: 4;
   min-height: 500px;
   min-width: 40px;
+//   opacity: 0.8;
 
   .logo {
     display: block;
@@ -17,6 +19,7 @@
     margin-top: 0;
     width: 100%;
     height: auto;
+    border-radius: 35%;
     // opacity: 0.9;
   }
   nav {
@@ -31,21 +34,21 @@
     a {
         font-size: 23px;
         font-weight: 800;
-        color: hsl(48, 100%, 51%);
+        color: hsl(20, 10%, 51%);
         display: block;
         position: relative;
         text-decoration: none;
         line-height: 400%;
     i {
         transition: all 0.4s ease-out;
+
     }
 
     &:hover {
-        color: hsl(0, 0%, 0%);
+        color: hsl(20, 100%, 51%);
         text-shadow: 0 0 40px hsl(0, 0%, 20%);
-
         svg {
-            opacity: 0.5;
+            opacity: 0.3;
         }
         &::after {
             opacity: 1;
@@ -62,7 +65,7 @@
         text-align: center;
         opacity: 0;
         transition: all 0.4s ease-out;
-        text-shadow: 1px 1px 4px hsl(48, 100%, 60%), -1px -1px 25px hsl(20, 100%, 60%), 0 0 12px hsl(48, 100%, 60%);
+        text-shadow: 1px 1px 4px hsl(38, 100%, 60%), -1px -1px 25px hsl(20, 100%, 60%), 0 0 12px hsl(38, 100%, 60%);
     }
     &:first-child {
         &::after {
@@ -89,6 +92,10 @@
     &.active {
         svg {
             color:hsl(20, 100%, 51%);
+            border-style: solid double;
+            border-radius: 50%;
+            padding: 5px;
+            border-color: hsl(15, 100%, 51%);
             font-size: 150%;
         }
     }
