@@ -20,7 +20,11 @@
     width: 100%;
     height: auto;
     border-radius: 35%;
-    // opacity: 0.9;
+    animation: rotateIn 1.3s linear both;
+    transition: ease-in-out 0.5s 1.4s;
+    &:hover {
+        width: 180%;
+    }
   }
   nav {
     display: block;
