@@ -4,7 +4,7 @@
   left: 15%;
   top: 50%;
   transform: translateY(-50%);
-  width: 40%;
+  width: 80%;
   max-height: 90%;
 }
 
@@ -75,7 +75,6 @@ h2 {
   margin-top: 50px;
   float: left;
   animation: fadeIn 1s 1.6s backwards;
-  white-space: nowrap;
 }
 
 .flat-button:hover {

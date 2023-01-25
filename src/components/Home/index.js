@@ -6,16 +6,20 @@ import './index.scss';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
-  const hiArray = ['H', 'e', 'l', 'l', 'o', ',', <br />, 'I', "'",'m']
+  const hiArray = ['H', 'e', 'l', 'l', 'o', ',']
   const nameArray = ['L', 'u', 'k', 'a', 's', 'z']
   const jobArray = ['w', 'e', 'b', '','d','e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.']
-useEffect(() => {return setTimeout(() => {setLetterClass('text-animate-hover')}, 4000)}, [])
+useEffect(() => { async function check () {return setTimeout(() => {setLetterClass('text-animate-hover')}, 4000)} check ()}, [])
   return (
     <div className="container home-page">
       <div className="text-zone">
         <h1>
         <AnimatedLetters letterClass={letterClass}
           strArray={hiArray} idx={12}/>
+          <br/>
+          <span className={letterClass} _12>I</span>
+          <span className={letterClass} _13>'</span>
+          <span className={letterClass} _14>m</span>
           <span className='surname'>W</span>
           <AnimatedLetters letterClass={letterClass}
           strArray={nameArray} idx={15}/>
