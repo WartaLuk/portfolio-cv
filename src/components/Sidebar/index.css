@@ -20,12 +20,8 @@
   width: 100%;
   height: auto;
   border-radius: 35%;
-  animation: rotateIn 1.3s linear both;
+  animation: to-visible 1.3s linear both;
   transition: ease-in-out 0.5s 0.5s;
-}
-
-.nav-bar .logo:hover {
-  width: 180%;
 }
 
 .nav-bar nav {
@@ -54,7 +50,7 @@
 }
 
 .nav-bar nav a:hover {
-  color: #ff5805;
+  color: #ff4405;
   text-shadow: 0 0 40px #333333;
 }
 
@@ -108,4 +104,50 @@
   padding: 5px;
   border-color: #ff4405;
   font-size: 150%;
+  animation: rol-border 5s infinite;
+}
+
+@keyframes to-visible {
+  0% {
+    opacity: 0;
+    width: 40%;
+  }
+  20% {
+    opacity: 0.2;
+    width: 50%;
+  }
+  50% {
+    opacity: 0.4;
+    width: 80%;
+  }
+  70% {
+    opacity: 0.6;
+    width: 90%;
+  }
+  90% {
+    opacity: 0.8;
+    width: 100%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rol-border {
+  0% {
+    border-style: solid double;
+  }
+  33% {
+    border-color: #ffc105;
+  }
+  50% {
+    border-style: double solid;
+  }
+  66% {
+    border-color: #ffff05;
+  }
+  100% {
+    border-style: solid double;
+    border-color: #ff0505;
+  }
 }

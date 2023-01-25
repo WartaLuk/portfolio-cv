@@ -16,6 +16,10 @@
   font-weight: 400;
 }
 
+.home-page .text-zone h1 span span:hover {
+  color: #33ffff;
+}
+
 .home-page .text-zone h1 .surname {
   color: #ff2b00;
   padding-left: 5px;

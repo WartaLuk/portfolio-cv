@@ -1,8 +1,9 @@
 
 import { Link } from 'react-router-dom'
-import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useState } from 'react';
 import './index.scss';
+import Logo from "./Logo/index.js";
+import AnimatedLetters from '../AnimatedLetters';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -17,9 +18,9 @@ useEffect(() => { async function check () {return setTimeout(() => {setLetterCla
         <AnimatedLetters letterClass={letterClass}
           strArray={hiArray} idx={12}/>
           <br/>
-          <span className={letterClass} _12>I</span>
-          <span className={letterClass} _13>'</span>
-          <span className={letterClass} _14>m</span>
+          <span className={letterClass}>I</span>
+          <span className={letterClass}>'</span>
+          <span className={letterClass}>m</span>
           <span className='surname'>W</span>
           <AnimatedLetters letterClass={letterClass}
           strArray={nameArray} idx={15}/>
@@ -32,6 +33,7 @@ useEffect(() => { async function check () {return setTimeout(() => {setLetterCla
           CONTACT ME
         </Link>
       </div>
+      <Logo />
     </div>
   )
 }
