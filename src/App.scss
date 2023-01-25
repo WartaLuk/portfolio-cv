@@ -1,9 +1,10 @@
 $primary-color: hsl(20, 5%, 98%);
 
 @import 'animate.css';
+@import '~loaders.css/src/animations/pacman.scss';
 
 @font-face {
-  font-family: 'Helvetica Neue' ;
+  font-family: 'Helvetica Neue';
   src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
 }
 
@@ -21,3 +22,21 @@ input,
 textarea {
   font-family: 'Helvetica Neue';
 }
+
+// .loader-active {
+//   color: hsl(180, 100%, 60%);
+//   display: block;
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   margin: auto;
+//   width: 50px;
+//   height: 50px;
+//   z-index: 4;
+//   padding: 90px;
+//   animation: fadeOut 2s 0s;
+//   animation-fill-mode: forwards;
+
+// }

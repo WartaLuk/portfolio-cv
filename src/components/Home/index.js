@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import './index.scss';
 import Logo from "./Logo/index.js";
 import AnimatedLetters from '../AnimatedLetters';
+import Loader from 'react-loaders';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -11,7 +12,7 @@ const Home = () => {
   const nameArray = ['L', 'u', 'k', 'a', 's', 'z']
   const jobArray = ['w', 'e', 'b', '','d','e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.']
 useEffect(() => { async function check () {return setTimeout(() => {setLetterClass('text-animate-hover')}, 4000)} check ()}, [])
-  return (
+  return (<>
     <div className="container home-page">
       <div className="text-zone">
         <h1>
@@ -35,6 +36,8 @@ useEffect(() => { async function check () {return setTimeout(() => {setLetterCla
       </div>
       <Logo />
     </div>
+    {/* <Loader type="cube-transition" />*/}
+    </>
   )
 }
 

@@ -1,4 +1,4 @@
-.about-page {
+.about-page, .contact-page {
   left: 15%;
 }
 
@@ -21,6 +21,7 @@ h1 {
   font-weight: 400;
   margin-bottom: 40px;
   left: 10px;
+  min-width: max-content;
 }
 
 h1::before {
@@ -72,12 +73,11 @@ p:nth-of-type(3) {
 }
 
 .stage-cube-cont {
-  width: 50%;
+  width: 100%;
   height: 100%;
-  top: 0;
+  top: 60%;
   margin-left: 0;
   position: absolute;
-  right: 0;
   overflow: hidden;
 }
 
