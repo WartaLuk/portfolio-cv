@@ -33,6 +33,12 @@
   0% {
     opacity: 0;
   }
+  10% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.1;
+  }
   100% {
     opacity: 0.2;
   }
@@ -41,9 +47,6 @@
 @keyframes a-container {
   0% {
     width: 0;
-  }
-  50% {
-    width: calc(400px * 0.7);
   }
   100% {
     width: 400px;

@@ -11,7 +11,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+hr {
+  border-color: hsl(15, 100%, 60%);
+}
 @keyframes blink {
   70% {
     box-shadow: none;
@@ -37,7 +39,7 @@ body {
     border-right: 0.15em solid hsl(314, 100%, 51%);
     white-space: nowrap;
     margin: 0 auto;
-    text-align: left;
+    text-justify: left;
     letter-spacing: 0.15em;
     animation: typing 20s 3s infinite, blink-caret 0.75s step-end infinite;
   }
@@ -46,12 +48,26 @@ body {
 @keyframes typing {
   0% {
     max-width: 0%;
+    opacity: 0;
+    color: hsl(15, 100%, 60%);
+  }
+  1% {
+    opacity: 1;
+  }
+  6% {
+    color: hsl(33, 10%, 10%);
   }
   50% {
     max-width: 100%;
   }
-  100% {
+  95% {
     max-width: 100%;
+    opacity: 1;
+    color:hsl(33, 10%, 10%);
+  }
+  100% {
+    opacity: 0;
+    color:hsl(180, 100%, 51%)
   }
 }
 

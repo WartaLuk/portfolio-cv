@@ -1,5 +1,5 @@
 import "./index.scss";
-import LogoW from '../../../assets/images/logo-w.png'
+import LogoW from '../../assets/images/logo-w.png'
 const Logo = () => {
 return (
     <div className="logo-container">

@@ -39,11 +39,15 @@
 .nav-bar nav a {
   font-size: 23px;
   font-weight: 800;
-  color: #333333;
+  color: #fafaf9;
   display: block;
   position: relative;
   text-decoration: none;
   line-height: 400%;
+}
+
+.nav-bar nav a svg {
+  background-color: #333333;
 }
 
 .nav-bar nav a i {
@@ -80,6 +84,8 @@
 .nav-bar nav a svg {
   border-radius: 50%;
   padding: 5px;
+  height: 25px;
+  width: 25px;
 }
 
 .nav-bar nav a:first-child svg {
@@ -121,10 +127,14 @@
 
 .nav-bar nav a.active svg {
   color: #ff5805;
-  border-style: solid double;
   border-color: #ff4405;
+  border-width: 5px;
   font-size: 150%;
   animation: rol-border 5s infinite;
+}
+
+.nav-bar nav a.active svg :hover {
+  animation-play-state: paused;
 }
 
 @keyframes to-visible {

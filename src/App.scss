@@ -21,6 +21,22 @@ $primary-color: hsl(20, 5%, 98%);
 input,
 textarea {
   font-family: 'Helvetica Neue';
+  background-color: hsla(20, 100%, 60%, 0.1);
+  border-color: hsl(180, 100%, 51%);
+  color: hsl(180, 20%, 20%);
+  font-size: 16px;
+  animation: blink 12s ease-out infinite;
+  position: static;
+  &::placeholder {
+    color: hsl(180, 100%, 51%);
+  }
+  &:hover {
+    box-shadow: 0 0 12px hsl(180, 100%, 51%);
+  }
+  &:disabled {
+    border-color: hsl(15, 100%, 60%);
+    background-color: hsla(20, 100%, 60%, 0.1);
+  }
 }
 
 // .loader-active {
