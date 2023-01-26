@@ -14,7 +14,7 @@ import Loader from 'react-loaders'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const titleArray = ['A', 'B', 'O', 'U', 'T', 'M', 'E']
+  const titleArray = ['A', 'B', 'O', 'U', 'T', ' ' ,'M', 'E']
   useEffect(() => {
     async function check() {
       return setTimeout(() => {

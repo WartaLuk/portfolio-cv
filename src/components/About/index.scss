@@ -83,10 +83,11 @@ p {
   transform-style: preserve-3d;
   transform-origin: 100px 100px 0;
   margin-left: calc(50% - 100px);
+  z-index: 10;
   div {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border: 4px double hsl(180, 100%, 60%);
     background-color: hsla(15, 100%, 60%, 0.2);
     text-align: center;
@@ -95,24 +96,25 @@ p {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 35px 0px hsl(180, 100%, 80%);
+    z-index: 10;
   }
   .face1 {
-    transform: rotateY(90deg) translateZ(100px);
+    transform: rotateY(90deg) translateZ(150px);
   }
   .face2 {
-    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    transform: rotateY(90deg) rotateX(90deg) translateZ(150px);
   }
   .face3 {
-    transform: rotateX(90deg) rotateZ(270deg) rotateY(90deg) translateZ(100px);
+    transform: rotateX(90deg) rotateZ(270deg) rotateY(90deg) translateZ(150px);
   }
   .face4 {
-    transform: rotateY(-90deg) rotateZ(180deg) translateZ(100px);
+    transform: rotateY(-90deg) rotateZ(180deg) translateZ(150px);
   }
   .face5 {
-    transform: rotateX(-90deg) translateZ(100px);
+    transform: rotateX(-90deg) translateZ(150px);
   }
   .face6 {
-    transform: translateZ(100px);
+    transform: translateZ(150px);
   }
 }
 

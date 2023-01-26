@@ -1,12 +1,12 @@
-import '../Layout/index.scss'
 import '../About/index.scss'
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { useState, useEffect } from 'react'
+import { faContactBook } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-
+  const titleArray = ['C', 'O', 'N', 'T', 'A','C','T', ' ' ,'M', 'E']
   useEffect(() => {
     async function check() {
       return setTimeout(() => {
@@ -16,52 +16,22 @@ const Contact = () => {
     check()
   }, [])
   return (
-    <div className="container contact-page">
-      <div className="text-zone">
-        <h1>
-          <AnimatedLetters
-            className="page-title"
-            letterClass={letterClass}
-            strArray={['C', 'O', 'N', 'T', 'A', 'C', 'T', ' ', 'M', 'E']}
-            idx={15}
-          />
-        </h1>
-        <p>
-          My hobby is theology; sometimes (several times a day) I will draw
-          something, but these are rather small sketches; As for sports, I think
-          I like chess the most; and I like hiking.
-        </p>
-        <div className="contact-form">
-            <div>
-              <div className="half">
-                <input type="text" name="name" placeholder="Name" required />
-              </div>
-              <div className="half">
-                <input type="email" name="email" placeholder="Email" required />
-              </div>
-              <div>
-                <input
-                  placeholder="Subject"
-                  type="text"
-                  name="subject"
-                  required
-                />
-              </div>
-              <div>
-                <textarea
-                  placeholder="Message"
-                  name="messasge"
-                  required
-                ></textarea>
-              </div>
-              <div>
-                <input type="submit" className="flat-button" />
-              </div>
-            </div>
+    <>
+      <div className="container about-page">
+        <div className="tex-zone">
+          <h1>
+            <AnimatedLetters
+              className="page-title"
+              letterClass={letterClass}
+              strArray={titleArray}
+              idx={12}
+            />
+          </h1>
         </div>
       </div>
-    </div>
+      {/* <Loader type="pacman" /> */}
+    </>
   )
 }
 
-export default Contact
+export default Contact;
