@@ -39,7 +39,7 @@
 .nav-bar nav a {
   font-size: 23px;
   font-weight: 800;
-  color: #8f7e76;
+  color: #333333;
   display: block;
   position: relative;
   text-decoration: none;
@@ -77,12 +77,29 @@
   text-shadow: 1px 1px 4px #ffb433, -1px -1px 25px #ff7733, 0 0 12px #ffb433;
 }
 
+.nav-bar nav a svg {
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.nav-bar nav a:first-child svg {
+  animation: blink 6s 1s infinite;
+}
+
 .nav-bar nav a:first-child::after {
   content: "HOME";
 }
 
+.nav-bar nav a.about-link svg {
+  animation: blink 6s 2s infinite;
+}
+
 .nav-bar nav a.about-link:after {
   content: "ABOUT";
+}
+
+.nav-bar nav a.contact-link svg {
+  animation: blink 6s 3s infinite;
 }
 
 .nav-bar nav a.contact-link:after {
@@ -93,6 +110,10 @@
   margin-top: 5%;
 }
 
+.nav-bar nav a:last-child svg {
+  animation: blink 6s 4s infinite;
+}
+
 .nav-bar nav a:last-child::after {
   content: "GITHUB";
   text-decoration: underline;
@@ -101,8 +122,6 @@
 .nav-bar nav a.active svg {
   color: #ff5805;
   border-style: solid double;
-  border-radius: 50%;
-  padding: 5px;
   border-color: #ff4405;
   font-size: 150%;
   animation: rol-border 5s infinite;

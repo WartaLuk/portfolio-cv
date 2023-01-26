@@ -12,3 +12,55 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@keyframes blink {
+  70% {
+    box-shadow: none;
+  }
+  80% {
+    box-shadow: 0 0 12px hsl(180, 100%, 51%);
+  }
+  90% {
+    box-shadow: 0 0 6px hsl(180, 100%, 51%);
+  }
+  100% {
+    box-shadow: 0 0 1px hsl(180, 100%, 51%);
+  }
+}
+.typewriter {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow: hidden;
+    border-right: 0.15em solid hsl(314, 100%, 51%);
+    white-space: nowrap;
+    margin: 0 auto;
+    text-align: left;
+    letter-spacing: 0.15em;
+    animation: typing 20s 3s infinite, blink-caret 0.75s step-end infinite;
+  }
+}
+
+@keyframes typing {
+  0% {
+    max-width: 0%;
+  }
+  50% {
+    max-width: 100%;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: hsl(314, 100%, 51%);
+  }
+}

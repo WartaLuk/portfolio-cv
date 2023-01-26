@@ -12,3 +12,55 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@keyframes blink {
+  70% {
+    box-shadow: none;
+  }
+  80% {
+    box-shadow: 0 0 12px #05ffff;
+  }
+  90% {
+    box-shadow: 0 0 6px #05ffff;
+  }
+  100% {
+    box-shadow: 0 0 1px #05ffff;
+  }
+}
+
+.typewriter h1,
+.typewriter h2,
+.typewriter h3,
+.typewriter h4,
+.typewriter h5,
+.typewriter h6 {
+  overflow: hidden;
+  border-right: 0.15em solid #ff05c5;
+  white-space: nowrap;
+  margin: 0 auto;
+  text-align: left;
+  letter-spacing: 0.15em;
+  animation: typing 20s 3s infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    max-width: 0%;
+  }
+  50% {
+    max-width: 100%;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff05c5;
+  }
+}

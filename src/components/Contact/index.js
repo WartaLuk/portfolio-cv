@@ -1,3 +1,4 @@
+import '../Layout/index.scss'
 import '../About/index.scss'
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
@@ -31,34 +32,32 @@ const Contact = () => {
           I like chess the most; and I like hiking.
         </p>
         <div className="contact-form">
-          <form>
-            <ul>
-              <li className="half">
+            <div>
+              <div className="half">
                 <input type="text" name="name" placeholder="Name" required />
-              </li>
-              <li className="half">
+              </div>
+              <div className="half">
                 <input type="email" name="email" placeholder="Email" required />
-              </li>
-              <li>
+              </div>
+              <div>
                 <input
                   placeholder="Subject"
                   type="text"
                   name="subject"
                   required
                 />
-              </li>
-              <li>
+              </div>
+              <div>
                 <textarea
                   placeholder="Message"
                   name="messasge"
                   required
                 ></textarea>
-              </li>
-              <li>
+              </div>
+              <div>
                 <input type="submit" className="flat-button" />
-              </li>
-            </ul>
-          </form>
+              </div>
+            </div>
         </div>
       </div>
     </div>

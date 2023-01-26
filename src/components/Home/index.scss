@@ -13,8 +13,7 @@
       font-family: 'Coolvetica';
       font-weight: 400;
       span span:hover {
-          color: hsl(180, 100%, 60%);
-        
+        color: hsl(180, 100%, 60%);
       }
       .surname {
         color: hsl(10, 100%, 50%);
@@ -23,6 +22,10 @@
         border-style: solid none solid solid;
         border-radius: 50%;
         animation-delay: 1.6s;
+        animation-name: blink;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
         &:hover::after {
           content: 'artałowicz';
         }
@@ -37,6 +40,7 @@
       margin-top: -30px;
       left: 15px;
       opacity: 0.7px;
+      animation: fadeIn 1s 1.7s backwards;
     }
     &::after {
       content: '<h1/>';
@@ -82,4 +86,10 @@ h2 {
     background-color: hsl(180, 100%, 60%);
     color: hsl(20, 10%, 98%);
   }
+}
+
+.job {
+  max-width: fit-content;
+  margin: 16px 0 0 0;
+  left: 0;
 }
