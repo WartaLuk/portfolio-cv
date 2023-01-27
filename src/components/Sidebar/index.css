@@ -2,12 +2,11 @@
   background: linear-gradient(to right, #242424, #333333 5%, #242424 6%, #333333 95%);
   background-image: url("../../assets/images/navbar.png");
   background-size: auto 100%;
-  background-attachment: fixed;
   width: 10vw;
   height: 90%;
   top: 5%;
   bottom: 5%;
-  position: absolute;
+  position: fixed;
   z-index: 4;
   min-height: 500px;
   min-width: 40px;

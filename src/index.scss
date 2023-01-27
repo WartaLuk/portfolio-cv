@@ -1,19 +1,4 @@
-html {
-  font-size: 105%;
-}
-body {
-  margin: 0;
-  font: 300 110px/1.4 'Helvetica Neue', 'sans-serif';
-  color: hsl(33, 10%, 10%);
-  background-color: hsl(20, 10%, 98%);
-  overflow: hidden;
-  display: block;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-hr {
-  border-color: hsl(15, 100%, 60%);
-}
+
 @keyframes blink {
   70% {
     box-shadow: none;
@@ -26,22 +11,6 @@ hr {
   }
   100% {
     box-shadow: 0 0 1px hsl(180, 100%, 51%);
-  }
-}
-.typewriter {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    overflow: hidden;
-    border-right: 0.15em solid hsl(314, 100%, 51%);
-    white-space: nowrap;
-    margin: 0 auto;
-    text-justify: left;
-    letter-spacing: 0.15em;
-    animation: typing 20s 3s infinite, blink-caret 0.75s step-end infinite;
   }
 }
 

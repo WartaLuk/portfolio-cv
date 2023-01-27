@@ -1,13 +1,14 @@
 import '../About/index.scss'
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
-import { useState, useEffect } from 'react'
-import { faContactBook } from '@fortawesome/free-solid-svg-icons'
+import { useState, useEffect, useRef } from 'react'
 import Logo from '../Logo'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const titleArray = ['C', 'O', 'N', 'T', 'A','C','T', ' ' ,'M', 'E']
+  const refForm = useRef;
   useEffect(() => {
     async function check() {
       return setTimeout(() => {
@@ -16,6 +17,25 @@ const Contact = () => {
     }
     check()
   }, [])
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+    .sendForm(
+      'gmail',
+      'service_apol1xs',
+      refForm.current,
+      'template_2qxks8s'
+    )
+    .then (
+      () => {
+        alert('Message successfully sent!')
+        window.location.reload(false)
+      },
+      alert('Failed to send the message, please try again')
+    )
+  }
+
   return (
     <>
       <div className="container about-page">
@@ -30,6 +50,9 @@ const Contact = () => {
             />
           </h1>
           <div className="contact-form">
+            <center>
+              <form ref={refForm} onSubmit={sendEmail}>
+              {/* <form> */}
             <ul>
               <li className="half">
                 <input type="text" name="name" placeholder="Name" required />
@@ -42,10 +65,10 @@ const Contact = () => {
                   required
                 />
               </li>
-              <li className='half'>
+              <li className='full'>
               <input type="email" name="email" placeholder="Email" required />
               </li>
-              <li className='half'>
+              <li className='full'>
                 <textarea
                   placeholder="Message"
                   name="messasge"
@@ -56,8 +79,9 @@ const Contact = () => {
                 <input type="submit" className="flat-button" value="SEND"/>
               </li>
             </ul>
+            </form>
+            </center>
         </div>
-        <hr/>
         </div>
       </div>
       <Logo />

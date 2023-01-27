@@ -17,6 +17,23 @@ $primary-color: hsl(20, 5%, 98%);
   font-family: 'Coolvetica';
   src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
 }
+html {
+  font-size: 105%;
+  height: 105%;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  font: 300 110px/1.4 'Helvetica Neue', 'sans-serif';
+  color: hsl(33, 10%, 10%);
+  background-color: hsl(20, 10%, 98%);
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+hr {
+  border-color: hsl(15, 100%, 60%);
+}
 
 input,
 textarea {
@@ -37,8 +54,72 @@ textarea {
     border-color: hsl(15, 100%, 60%);
     background-color: hsla(20, 100%, 60%, 0.1);
   }
+  &::-webkit-scrollbar-track {
+    background: hsla(180, 100%, 60%, 0.1); 
+  }
+   
+  
+  &::-webkit-scrollbar-thumb {
+    background: hsla(20, 100%, 60%, 0.8); 
+  }
+  
+  &::-webkit-scrollbar-thumb:hover {
+    background: hsl(0,100%,60%); 
+  }
+}
+.flat-button {
+  color: hsl(20, 100%, 51%);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  font-family: 'Helvetica';
+  text-decoration: none;
+  transition: 1s 0.5s ease;
+  padding: 8px 16px;
+  border: 1px solid hsl(180, 100%, 60%);
+  margin-top: 50px;
+  animation: fadeIn 1s 1.6s backwards;
+  // white-space: nowrap;
+  &:hover {
+    font-weight: 600;
+    letter-spacing: 6px;
+    background-color: hsl(180, 100%, 60%);
+    color: hsl(20, 10%, 98%);
+  }
+}
+.typewriter {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow: hidden;
+    border-right: 0.15em solid hsl(314, 100%, 51%);
+    white-space: nowrap;
+    margin: 0 auto;
+    text-justify: left;
+    letter-spacing: 0.15em;
+    animation: typing 20s 3s infinite, blink-caret 0.75s step-end infinite;
+  }
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5%;
+  background-color: hsla(180, 100%, 51%, 0.2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsla(15, 100%, 60%,0.9);
+  border-radius: 10%;
+}
 // .loader-active {
 //   color: hsl(180, 100%, 60%);
 //   display: block;
