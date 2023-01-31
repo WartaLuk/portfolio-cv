@@ -72,7 +72,7 @@ p {
   top: 60%;
   margin-left: 0;
   position: absolute;
-  overflow: hidden;
+  overflow: visible;
 }
 .cube-spinner {
   animation-name: spincube;
@@ -80,7 +80,7 @@ p {
   animation-iteration-count: infinite;
   animation-duration: 14s;
   transform-style: preserve-3d;
-  transform-origin: 100px 100px 0;
+  transform-origin: 100px 100px 30px;
   margin-left: calc(50% - 100px);
   z-index: 10;
   div {

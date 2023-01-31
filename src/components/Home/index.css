@@ -34,32 +34,13 @@
   animation-timing-function: ease-out;
 }
 
+.home-page .text-zone h1 .surname::after {
+  transition: easy-out;
+  opacity: 0;
+}
+
 .home-page .text-zone h1 .surname:hover::after {
   content: 'artałowicz';
-}
-
-.home-page .text-zone::before {
-  content: '<h1>';
-  font-family: 'La Belle Aurore';
-  color: #33ffff;
-  font-size: 24px;
-  position: absolute;
-  margin-top: -30px;
-  left: 15px;
-  opacity: 0.7px;
-  animation: fadeIn 1s 1.7s backwards;
-}
-
-.home-page .text-zone::after {
-  content: '<h1/>';
-  font-family: 'La Belle Aurore';
-  color: #33ffff;
-  font-size: 24px;
-  position: absolute;
-  margin-top: 18px;
-  left: 15px;
-  opacity: 0.7px;
-  animation: fadeIn 1s 1.7s backwards;
 }
 
 h2 {
