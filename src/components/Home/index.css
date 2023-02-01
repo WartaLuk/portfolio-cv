@@ -17,7 +17,7 @@
 }
 
 .home-page .text-zone h1 span span:hover {
-  color: #33ffff;
+  color: ele;
 }
 
 .home-page .text-zone h1 .surname {
@@ -36,7 +36,6 @@
 
 .home-page .text-zone h1 .surname::after {
   transition: easy-out;
-  opacity: 0;
 }
 
 .home-page .text-zone h1 .surname:hover::after {

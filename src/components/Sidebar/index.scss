@@ -1,3 +1,4 @@
+@import '../../variables.scss';
 .nav-bar {
     background: linear-gradient(to right, hsl(0, 0%, 14%), hsl(0, 0%, 20%) 5%, hsl(0, 0%, 14%) 6%, hsl(0, 0%, 20%) 95%);
   background-image: url('../../assets/images/navbar.png');
@@ -18,7 +19,7 @@
     margin-top: 0;
     width: 100%;
     height: auto;
-    border-radius: 35%;
+    border-radius: 0 35% 35% 5%;
     animation: to-visible 1.3s linear both;
     transition: ease-in-out 0.5s 0.5s;
     // &:hover {
@@ -38,13 +39,13 @@
     a {
         font-size: 23px;
         font-weight: 800;
-        color: hsl(20, 10%, 98%);
+        color: $main-text-color;
         display: block;
         position: relative;
         text-decoration: none;
         line-height: 400%;
         svg {
-            background-color: hsl(0, 0%, 20%);
+            background-color: $primary-color;
         }
     i {
         transition: all 0.4s ease-out;
@@ -53,7 +54,7 @@
 
     &:hover {
         color: hsl(15, 100%, 51%);
-        text-shadow: 0 0 40px hsl(0, 0%, 20%);
+        text-shadow: 0 0 40px $primary-color;
         svg {
             opacity: 0.3;
         }
@@ -115,14 +116,11 @@
     }
     &.active {
         svg {
-            color:hsl(20, 100%, 51%);
-            border-color: hsl(15, 100%, 51%);
+            color:$element-color-two;
+            border-color: $element-color-one;
             border-width: 5px;
             font-size: 150%;
             animation: rol-border 5s infinite;
-            :hover {
-                animation-play-state: paused;
-            }
         }
     }
     }

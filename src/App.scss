@@ -1,7 +1,7 @@
-$primary-color: hsl(20, 5%, 98%);
-
+@import './variables.scss';
 @import 'animate.css';
 @import '~loaders.css/src/animations/pacman.scss';
+
 
 @font-face {
   font-family: 'Helvetica Neue';
@@ -25,37 +25,53 @@ html {
 body {
   margin: 0;
   font: 300 110px/1.4 'Helvetica Neue', 'sans-serif';
-  color: hsl(33, 10%, 10%);
-  background-color: hsl(20, 10%, 98%);
+  color: $main-text-color;
+  background-color: $main-text-color;
   display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  &::before {
+    content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 30%;
+  width: 100%;
+  background: $primary-color;
+  transform: skew(-30deg);
+  transform-origin:top;
+  }
 }
 hr {
-  border-color: hsl(15, 100%, 60%);
+  border-color: $element-color-one;
 }
 
 input,
 textarea {
   font-family: 'Helvetica Neue';
-  background-color: hsla(20, 100%, 60%, 0.1);
-  border-color: hsl(180, 100%, 51%);
-  color: hsl(180, 20%, 20%);
-  font-size: 16px;
+  background-color: hsla(33, 10%, 10%, 0.8);
+  border-color: $element-color-two;
+  border-width: 3px;
+  border-style: solid;
+  color: $main-text-color;
+  font-size: 22px;
   animation: blink 12s ease-out infinite;
   position: static;
   &::placeholder {
-    color: hsl(180, 100%, 51%);
+    color: $element-color-three;
   }
   &:hover {
-    box-shadow: 0 0 12px hsl(180, 100%, 51%);
+    box-shadow: 0 0 12px $element-color-three;
   }
   &:disabled {
-    border-color: hsl(15, 100%, 60%);
-    background-color: hsla(20, 100%, 60%, 0.1);
+    border-color: $element-color-one;
+    background-color: hsla(20, 100%, 60%, 0.3);
+  }
+  @while (value: '') {
+    border-color: $main-text-color;
   }
   &::-webkit-scrollbar-track {
-    background: hsla(180, 100%, 60%, 0.1); 
+    background: hsla(180, 100%, 60%, 0.3); 
   }
    
   
@@ -68,7 +84,7 @@ textarea {
   }
 }
 .flat-button {
-  color: hsl(20, 100%, 51%);
+  color: $element-color-three;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 5px;
@@ -76,15 +92,15 @@ textarea {
   text-decoration: none;
   transition: 1s 0.5s ease;
   padding: 8px 16px;
-  border: 1px solid hsl(180, 100%, 60%);
+  border: 1px solid $element-color-three;
   margin-top: 50px;
   animation: fadeIn 1s 1.6s backwards;
   // white-space: nowrap;
   &:hover {
     font-weight: 600;
     letter-spacing: 6px;
-    background-color: hsl(180, 100%, 60%);
-    color: hsl(20, 10%, 98%);
+    background-color: $element-color-three;
+    color: $main-text-color;
   }
 }
 .typewriter {

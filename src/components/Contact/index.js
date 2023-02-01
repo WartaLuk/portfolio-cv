@@ -1,9 +1,12 @@
+
 import '../About/index.scss'
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import React, { useState, useEffect, useRef } from 'react'
 import Logo from '../Logo'
 import emailjs from '@emailjs/browser'
+import Loader from 'react-loaders'
+
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -27,9 +30,11 @@ const Contact = () => {
      form.current,
       PUBLIC_KEY)
       .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
+        alert('Message successfully sent!' +
+      "\nI will reply to your email as soon as possible. \nBest regards, \nŁukasz Wartałowicz")
+        window.location.reload(true)
+      }, () => {
+        alert('Failed to send the message, please try again')
       });
   };
 
@@ -49,7 +54,6 @@ const Contact = () => {
           <div className="contact-form">
             <center>
               <form ref={form} onSubmit={sendEmail}>
-                {/* <form> */}
                 <ul>
                   <li className="half">
                     <input
@@ -78,7 +82,7 @@ const Contact = () => {
                   <li className="full">
                     <textarea
                       placeholder="Message"
-                      name="messasge"
+                      name="message"
                       required
                     ></textarea>
                   </li>

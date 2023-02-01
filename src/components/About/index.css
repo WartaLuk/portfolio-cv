@@ -1,4 +1,5 @@
-.about-page, .contact-page {
+.about-page,
+.contact-page {
   left: 15%;
 }
 
@@ -65,7 +66,21 @@ p:nth-of-type(2) {
 }
 
 p:nth-of-type(3) {
-  animation-delay: 1.4s;
+  animation: fadeIn 1s 2.4s backwards;
+}
+
+p:nth-of-type(3) span {
+  animation: blink 18s infinite;
+}
+
+p:nth-of-type(3)::after {
+  display: none;
+  content: "Does anyone here play Magic the Gathering? :)";
+  color: #ff7733;
+}
+
+p:nth-of-type(3):hover::after {
+  display: inline;
 }
 
 .text-animate-hover:hover {
@@ -92,6 +107,10 @@ p:nth-of-type(3) {
   z-index: 10;
 }
 
+.cube-spinner:hover {
+  animation-play-state: paused;
+}
+
 .cube-spinner div {
   position: absolute;
   width: 300px;
@@ -105,6 +124,11 @@ p:nth-of-type(3) {
   align-items: center;
   box-shadow: 0 0 35px 0px #99ffff;
   z-index: 10;
+}
+
+.cube-spinner div svg {
+  border-radius: 50%;
+  animation: blink 12s infinite;
 }
 
 .cube-spinner .face1 {

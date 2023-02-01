@@ -1,4 +1,6 @@
-.about-page, .contact-page {
+@import '../../variables.scss';
+.about-page,
+.contact-page {
   left: 15%;
 }
 .text-zone {
@@ -11,7 +13,7 @@
   max-height: 90%;
 }
 h1 {
-  color: hsl(20, 100%, 51%);
+  color: $element-color-two;
   font-size: 54px;
   margin-top: 70px;
   margin-left: 35px;
@@ -23,7 +25,7 @@ h1 {
   &::before {
     content: '<h1>';
     font-family: 'La Belle Aurore';
-    color: hsl(180, 100%, 60%);
+    color: $element-color-three;
     font-size: 24px;
     position: absolute;
     margin-top: -10px;
@@ -33,7 +35,7 @@ h1 {
   &::after {
     content: '<h1/>';
     font-family: 'La Belle Aurore';
-    color: hsl(180, 100%, 60%);
+    color: $element-color-three;
     font-size: 24px;
     position: absolute;
     margin-top: 70px;
@@ -43,11 +45,12 @@ h1 {
   }
 }
 p {
+  background-color: $primary-color;
   font-size: 22px;
-  color: hsl(180, 0%, 40%);
+  color: $main-text-color;
   font-family: 'Helvetica';
   font-weight: 300;
-  max-width: 80%;
+  max-width: 43%;
   animation: pulse 1s;
   &:nth-of-type(1) {
     animation-delay: 1.2s;
@@ -56,20 +59,32 @@ p {
     animation-delay: 1.3s;
   }
   &:nth-of-type(3) {
-    animation-delay: 1.4s;
+    animation: fadeIn 1s 2.4s backwards;
+    span {
+      animation: blink 18s infinite;
+    }
+    &::after {
+      display: none;
+      content: 'Does anyone here play Magic the Gathering? :)';
+      color: $element-color-two;
+    }
+    &:hover::after {
+      display: inline;
+    }
   }
 }
 
 .text-animate-hover {
   &:hover {
-    color: hsl(180, 100%, 60%);
+    color: $element-color-three;
   }
 }
 
 .stage-cube-cont {
   width: 100%;
   height: 100%;
-  top: 60%;
+  top: 40%;
+  right: 0%;
   margin-left: 0;
   position: absolute;
   overflow: visible;
@@ -82,20 +97,25 @@ p {
   transform-style: preserve-3d;
   transform-origin: 100px 100px 30px;
   margin-left: calc(50% - 100px);
+  transition-duration: 12s;
   z-index: 10;
   div {
     position: absolute;
     width: 300px;
     height: 300px;
-    border: 4px double hsl(180, 100%, 60%);
+    border: 4px double $element-color-three;
     background-color: hsla(15, 100%, 60%, 0.2);
     text-align: center;
     font-size: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 35px 0px hsl(180, 100%, 80%);
+    box-shadow: 0 0 35px 0px $element-color-semi-three;
     z-index: 10;
+    svg {
+      border-radius: 50%;
+      animation: blink 12s infinite;
+    }
   }
   .face1 {
     transform: rotateY(90deg) translateZ(150px);
@@ -114,6 +134,43 @@ p {
   }
   .face6 {
     transform: translateZ(150px);
+  }
+  &:hover {
+    .face1 {
+      transform: rotateY(90deg) translateZ(250px);
+      transition-duration: 5s;
+      transform-style: easy-out;
+      background-color: hsla(15, 100%, 60%, 0.4);
+    }
+    .face2 {
+      transform: rotateY(90deg) rotateX(90deg) translateZ(250px);
+      transition-duration: 5s;
+      transform-style: easy-out;
+    }
+    .face3 {
+      transform: rotateX(90deg) rotateZ(270deg) rotateY(90deg) translateZ(250px);
+      transition-duration: 5s;
+      transform-style: easy-out;
+      background-color: hsla(15, 100%, 60%, 0.4);
+    }
+    .face4 {
+      transform: rotateY(-90deg) rotateZ(180deg) translateZ(250px);
+      transition-duration: 5s;
+      transform-style: easy-out;
+      background-color: hsla(15, 100%, 60%, 0.4);
+    }
+    .face5 {
+      transform: rotateX(-90deg) translateZ(250px);
+      transition-duration: 5s;
+      transform-style: easy-out;
+      background-color: hsla(15, 100%, 60%, 0.4);
+    }
+    .face6 {
+      transform: translateZ(250px);
+      transition-duration: 5s;
+      transform-style: easy-out;
+      background-color: hsla(15, 100%, 60%, 0.4);
+    }
   }
 }
 

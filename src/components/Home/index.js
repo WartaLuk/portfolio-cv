@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react'
 import './index.scss'
 import Logo from '../Logo/index.js'
 import AnimatedLetters from '../AnimatedLetters'
-// import Loader from 'react-loaders'
+import Loader from 'react-loaders'
+
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -72,7 +73,7 @@ const Home = () => {
         </div>
         <Logo />
       </div>
-      {/* <Loader type="cube-transition" />*/}
+      {/* <Loader type="cube-transition" /> */}
     </>
   )
 }

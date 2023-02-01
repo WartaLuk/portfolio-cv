@@ -1,4 +1,4 @@
-
+@import './variables.scss';
 @keyframes blink {
   70% {
     box-shadow: none;
@@ -20,23 +20,21 @@
     opacity: 0;
     color: hsl(15, 100%, 60%);
   }
-  1% {
+  5% {
     opacity: 1;
   }
-  6% {
-    color: hsl(33, 10%, 10%);
+  35% {
+    color: $main-text-color;
   }
   50% {
     max-width: 100%;
   }
-  95% {
+  99% {
     max-width: 100%;
     opacity: 1;
-    color:hsl(33, 10%, 10%);
   }
   100% {
     opacity: 0;
-    color:hsl(180, 100%, 51%)
   }
 }
 
