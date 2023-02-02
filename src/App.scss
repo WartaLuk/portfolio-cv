@@ -67,7 +67,7 @@ textarea {
     border-color: $element-color-one;
     background-color: hsla(20, 100%, 60%, 0.3);
   }
-  @while (value: '') {
+  @while (value: '' ) {
     border-color: $main-text-color;
   }
   &::-webkit-scrollbar-track {
