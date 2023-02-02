@@ -1,12 +1,9 @@
-
 import '../About/index.scss'
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import React, { useState, useEffect, useRef } from 'react'
 import Logo from '../Logo'
 import emailjs from '@emailjs/browser'
-import Loader from 'react-loaders'
-
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -20,24 +17,24 @@ const Contact = () => {
     check()
   }, [])
 
-  const form = useRef();
+  const form = useRef()
 
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    emailjs.sendForm(SERVICE_ID,
-      TEMPLATE_ID,
-     form.current,
-      PUBLIC_KEY)
-      .then((result) => {
-        alert('Message successfully sent!' +
-      "\nI will reply to your email as soon as possible. \nBest regards, \nŁukasz Wartałowicz")
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
+      (result) => {
+        alert(
+          'Message successfully sent!' +
+            '\nI will reply to your email as soon as possible. \nBest regards, \nŁukasz Wartałowicz'
+        )
         window.location.reload(true)
-      }, () => {
+      },
+      () => {
         alert('Failed to send the message, please try again')
-      });
-  };
-
+      }
+    )
+  }
 
   return (
     <>
@@ -96,7 +93,6 @@ const Contact = () => {
         </div>
       </div>
       <Logo />
-      {/* <Loader type="pacman" /> */}
     </>
   )
 }

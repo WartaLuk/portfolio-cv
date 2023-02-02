@@ -12,7 +12,7 @@
   z-index: 4;
   min-height: 500px;
   min-width: 40px;
-  border-radius: 30px;
+  border-radius: 0 30px 30px 0;
   .logo {
     display: block;
     padding: 0;
@@ -94,6 +94,14 @@
         }
         &:after {
             content: "ABOUT";
+        }
+    }
+    &.skills-link {
+        svg {
+            animation: blink 6s 2s infinite;
+        }
+        &:after {
+            content: "SKILLS";
         }
     }
     &.contact-link {
