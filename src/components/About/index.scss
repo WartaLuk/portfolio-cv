@@ -1,8 +1,5 @@
 @import '../../variables.scss';
-.about-page,
-.contact-page {
-  left: 15%;
-}
+
 .text-zone {
   position: absolute;
   top: 50%;
@@ -12,40 +9,7 @@
   display: table-cell;
   max-height: 90%;
 }
-h1 {
-  color: $element-color-two;
-  font-size: 54px;
-  margin-top: 70px;
-  margin-left: 35px;
-  font-family: 'Coolvetica';
-  font-weight: 400;
-  margin-bottom: 40px;
-  left: 10px;
-  min-width: max-content;
-  &::before {
-    content: '<h1>';
-    font-family: 'La Belle Aurore';
-    color: $element-color-three;
-    font-size: 24px;
-    position: absolute;
-    margin-top: -10px;
-    left: 15px;
-    opacity: 0.7px;
-  }
-  &::after {
-    content: '<h1/>';
-    font-family: 'La Belle Aurore';
-    color: $element-color-three;
-    font-size: 24px;
-    position: absolute;
-    margin-top: 70px;
-    left: 15px;
-    opacity: 0.7px;
-    animation: fadeIn 1s 1.7s backwards;
-  }
-}
 p {
-  background-color: $primary-color;
   font-size: 22px;
   color: $main-text-color;
   font-family: 'Helvetica';
@@ -56,20 +20,12 @@ p {
     animation-delay: 1.2s;
   }
   &:nth-of-type(2) {
-    animation-delay: 1.3s;
+    animation-delay: 1.4s;
   }
   &:nth-of-type(3) {
-    animation: fadeIn 1s 2.4s backwards;
+    animation-delay: 1.6s;
     span {
       animation: blink 18s infinite;
-    }
-    &::after {
-      display: none;
-      content: 'Does anyone here play Magic the Gathering? :)';
-      color: $element-color-two;
-    }
-    &:hover::after {
-      display: inline;
     }
   }
 }
@@ -81,11 +37,11 @@ p {
 }
 
 .stage-cube-cont {
-  width: 100%;
-  height: 100%;
+  width: 30%;
+  height: 20%;
   top: 40%;
-  right: 0%;
-  margin-left: 0;
+  left: 50%;
+  margin-left: 100px;
   position: absolute;
   overflow: visible;
 }
@@ -98,7 +54,7 @@ p {
   transform-origin: 100px 100px 30px;
   margin-left: calc(50% - 100px);
   transition-duration: 12s;
-  z-index: 10;
+  z-index: 2;
   div {
     position: absolute;
     width: 300px;

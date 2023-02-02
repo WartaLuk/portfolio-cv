@@ -1,4 +1,3 @@
-
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters/index.js'
 import { useState, useEffect } from 'react'
@@ -11,7 +10,7 @@ import {
   faNodeJs,
   faReact,
 } from '@fortawesome/free-brands-svg-icons'
-import Loader from 'react-loaders'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -36,20 +35,22 @@ const About = () => {
               idx={12}
             />
           </h1>
-          <p>
-            I am a young, ambitious web developer who is looking for his first
-            job in IT.
-          </p>
-          <p>
-            What characterizes me is: commitment, analytical thinking,
-            creativity and the fact that I'm not afraid to ask questions if I
-            don't know something.
-          </p>
-          <p>
-            In my free time, I love to study and analyze the books of the Bible.
-            My other passions, I've been drawing and swimming since childhood,
-            and I've been playing chess for several years...
-          </p>
+          <div className="scroll">
+            <p>
+              I am a young, ambitious web developer who is looking for his first
+              job in IT.
+            </p>
+            <p>
+              What characterizes me is: commitment, analytical thinking,
+              creativity and the fact that I'm not afraid to ask questions if I
+              don't know something.
+            </p>
+            <p>
+              In my free time, I love to study and analyze the books of the
+              Bible. My other passions, I've been drawing and swimming since
+              childhood, and I've been playing chess for several years...
+            </p>
+          </div>
           <p>
             <hr />
           </p>
@@ -77,7 +78,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      {/* <Loader type="pacman" /> */}
     </>
   )
 }

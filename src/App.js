@@ -1,10 +1,11 @@
 
 import './App.scss'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
+import Skills from './components/Skills'
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="skills" element={<Skills />} />
+        <Route path="*" element={<Navigate to="/"/>} />
       </Route>
     </Routes>
   )

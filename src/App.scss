@@ -2,7 +2,6 @@
 @import 'animate.css';
 @import '~loaders.css/src/animations/pacman.scss';
 
-
 @font-face {
   font-family: 'Helvetica Neue';
   src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
@@ -18,34 +17,99 @@
   src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
 }
 html {
-  font-size: 105%;
-  height: 105%;
-  overflow-x: hidden;
+  height: 100%;
+  overflow: hidden;
+  max-width: max-content;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 30%;
+    width: 100%;
+    height: 100vh;
+    background: $primary-color;
+    transform: skew(-30deg);
+    transform-origin: top;
+  }
+}
+.about-page,
+.contact-page,
+.skills-page {
+  left: 15%;
 }
 body {
   margin: 0;
   font: 300 110px/1.4 'Helvetica Neue', 'sans-serif';
+  text-shadow: -1px 0 $primary-color, 0 1px $primary-color, 1px 0 $primary-color, 0 -1px $primary-color;
   color: $main-text-color;
   background-color: $main-text-color;
   display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y:scroll;
+}
+h1 {
+  color: $element-color-two;
+  font-size: 54px;
+  margin-top: 70px;
+  margin-left: 35px;
+  font-family: 'Coolvetica';
+  font-weight: 400;
+  margin-bottom: 40px;
+  left: 10px;
+  min-width: max-content;
   &::before {
-    content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 30%;
-  width: 100%;
-  background: $primary-color;
-  transform: skew(-30deg);
-  transform-origin:top;
+    content: '<h1>';
+    font-family: 'La Belle Aurore';
+    color: $element-color-three;
+    font-size: 24px;
+    position: absolute;
+    margin-top: -10px;
+    left: 15px;
+    opacity: 0.7px;
   }
+  &::after {
+    content: '<h1/>';
+    font-family: 'La Belle Aurore';
+    color: $element-color-three;
+    font-size: 24px;
+    position: absolute;
+    margin-top: 70px;
+    left: 15px;
+    opacity: 0.7px;
+    animation: fadeIn 1s 1.7s backwards;
+  }
+}
+h2 {
+  font-size: 48px;
+  font-family: 'Coolvetica';
+  color: $element-color-two;
+}
+h3 {
+  font-size: 42px;
+  font-family: 'Coolvetica';
+  color: $element-color-two;
+}
+h4 {
+  font-size: 38px;
+  font-family: 'Coolvetica';
+  color: $element-color-two;
+}
+ul {
+  font-size: 38px;
+  font-family: 'Coolvetica';
+  color: $element-color-two;
+}
+li {
+  font-size: 34px;
 }
 hr {
   border-color: $element-color-one;
 }
-
+.scroll {
+  overflow-y: scroll;
+}
 input,
 textarea {
   font-family: 'Helvetica Neue';
@@ -67,24 +131,20 @@ textarea {
     border-color: $element-color-one;
     background-color: hsla(20, 100%, 60%, 0.3);
   }
-  @while (value: '') {
-    border-color: $main-text-color;
-  }
   &::-webkit-scrollbar-track {
-    background: hsla(180, 100%, 60%, 0.3); 
+    background: hsla(180, 100%, 60%, 0.3);
   }
-   
-  
   &::-webkit-scrollbar-thumb {
-    background: hsla(20, 100%, 60%, 0.8); 
+    background: hsla(20, 100%, 60%, 0.8);
   }
-  
+
   &::-webkit-scrollbar-thumb:hover {
-    background: hsl(0,100%,60%); 
+    background: hsl(0, 100%, 60%);
   }
 }
 .flat-button {
   color: $element-color-three;
+  background-color: $primary-color;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 5px;
@@ -133,23 +193,7 @@ textarea {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: hsla(15, 100%, 60%,0.9);
+  background: hsla(15, 100%, 60%, 0.9);
   border-radius: 10%;
 }
-// .loader-active {
-//   color: hsl(180, 100%, 60%);
-//   display: block;
-//   position: absolute;
-//   left: 0;
-//   right: 0;
-//   top: 0;
-//   bottom: 0;
-//   margin: auto;
-//   width: 50px;
-//   height: 50px;
-//   z-index: 4;
-//   padding: 90px;
-//   animation: fadeOut 2s 0s;
-//   animation-fill-mode: forwards;
 
-// }
