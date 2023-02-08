@@ -1,15 +1,16 @@
+@import './variables.scss';
 @keyframes blink {
   70% {
     box-shadow: none;
   }
   80% {
-    box-shadow: 0 0 12px #05ffff;
+    box-shadow: 0 0 12px hsl(180, 100%, 51%);
   }
   90% {
-    box-shadow: 0 0 6px #05ffff;
+    box-shadow: 0 0 6px hsl(180, 100%, 51%);
   }
   100% {
-    box-shadow: 0 0 1px #05ffff;
+    box-shadow: 0 0 1px hsl(180, 100%, 51%);
   }
 }
 
@@ -17,13 +18,13 @@
   0% {
     max-width: 0%;
     opacity: 0;
-    color: #ff6633;
+    color: hsl(15, 100%, 60%);
   }
   5% {
     opacity: 1;
   }
   35% {
-    color: #fafafa;
+    color: $main-text-color;
   }
   50% {
     max-width: 100%;
@@ -43,16 +44,15 @@
     border-color: transparent;
   }
   50% {
-    border-color: #ff05c5;
+    border-color: hsl(314, 100%, 51%);
   }
 }
-
 @keyframes sideAnimation {
   0% {
     opacity: 0;
     font-size: 1;
     left: 0;
-    text-shadow: #99ffff 0 0 60px;
+    text-shadow: $element-color-semi-three 0 0 60px;
   }
   100% {
     opacity: 1;

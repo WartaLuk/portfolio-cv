@@ -1,0 +1,192 @@
+@import '../../variables.scss';
+.nav-bar {
+  background: linear-gradient(
+    to right,
+    hsl(0, 0%, 14%),
+    hsl(0, 0%, 20%) 5%,
+    hsl(0, 0%, 14%) 6%,
+    hsl(0, 0%, 20%) 95%
+  );
+  background-image: url('../../assets/images/navbar.png');
+
+  background-size: auto 100%;
+  width: 10vw;
+  height: 90%;
+  top: 5%;
+  bottom: 5%;
+  position: fixed;
+  z-index: 4;
+  min-height: 500px;
+  min-width: 40px;
+  border-radius: 0 30px 30px 0;
+  .logo {
+    display: block;
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 0 35% 35% 5%;
+    animation: to-visible 1.3s linear both;
+    transition: ease-in-out 0.5s 0.5s;
+    // &:hover {
+    //     width: 180%;
+    // }
+  }
+
+  nav {
+    display: block;
+    margin: 6%;
+    text-align: end;
+    position: absolute;
+    top: 40%;
+    width: 90%;
+    border-radius: 50%;
+    margin-left: 5%;
+    transition: 2s;
+    a {
+      font-size: 23px;
+      font-weight: 800;
+      color: $main-text-color;
+      display: block;
+      position: relative;
+      text-decoration: none;
+      line-height: 400%;
+      svg {
+        background-color: $primary-color;
+      }
+      i {
+        transition: all 0.4s ease-out;
+      }
+
+      &:hover {
+        color: $element-color-two;
+        text-shadow: 0 0 40px $primary-color;
+        background-color: hsla(20, 5%, 98%, 0.5);
+        svg {
+          opacity: 0.3;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+      &::after {
+        content: '';
+        font-size: 16px;
+        letter-spacing: 2px;
+        position: absolute;
+        background-color: hsla(0, 0%, 100%, 0.7);
+        bottom: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.4s ease-out;
+        text-shadow: 1px 1px 4px hsl(38, 100%, 60%),
+          -1px -1px 25px hsl(20, 100%, 60%), 0 0 12px hsl(38, 100%, 60%);
+      }
+      svg {
+        border-radius: 50%;
+        padding: 5px;
+        height: 25px;
+        width: 25px;
+      }
+      &:first-child {
+        svg {
+          animation: blink 6s 1s infinite;
+        }
+        &::after {
+          content: 'HOME';
+        }
+      }
+      &.about-link {
+        svg {
+          animation: blink 6s 2s infinite;
+        }
+        &:after {
+          content: 'ABOUT';
+        }
+      }
+      &.skills-link {
+        svg {
+          animation: blink 6s 2s infinite;
+        }
+        &:after {
+          content: 'SKILLS';
+        }
+      }
+      &.contact-link {
+        svg {
+          animation: blink 6s 3s infinite;
+        }
+        &:after {
+          content: 'CONTACT';
+        }
+      }
+      &:last-child {
+        margin-top: 5%;
+        svg {
+          animation: blink 6s 4s infinite;
+        }
+        &::after {
+          content: 'GITHUB';
+          text-decoration: underline;
+        }
+      }
+      &.active {
+        svg {
+          color: $element-color-two;
+          border-color: $element-color-one;
+          border-width: 5px;
+          font-size: 150%;
+          animation: rol-border 5s infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes to-visible {
+  0% {
+    opacity: 0;
+    width: 40%;
+  }
+  20% {
+    opacity: 0.2;
+    width: 50%;
+  }
+  50% {
+    opacity: 0.4;
+    width: 80%;
+  }
+
+  70% {
+    opacity: 0.6;
+    width: 90%;
+  }
+  90% {
+    opacity: 0.8;
+    width: 100%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rol-border {
+  0% {
+    border-style: solid double;
+  }
+  33% {
+    border-color: hsl(45, 100%, 51%);
+  }
+  50% {
+    border-style: double solid;
+  }
+  66% {
+    border-color: hsl(60, 100%, 51%);
+  }
+  100% {
+    border-style: solid double;
+    border-color: hsl(0, 100%, 51%);
+  }
+}
