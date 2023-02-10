@@ -95,14 +95,20 @@
 }
 
 @media (max-width: 1400px) {
+  .page {
+    height: 112vh;
+  }
   .stage-cube-cont {
-    top: 130%;
+    top: 90%;
     left: 15%;
   }
 }
 @media (max-width: 740px) {
+  .page {
+    height: 180vh;
+  }
   .stage-cube-cont {
-    top: 200%;
+    top: 95%;
   }
 }
 

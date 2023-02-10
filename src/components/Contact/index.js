@@ -1,40 +1,47 @@
-import '../About/index.scss'
-import './index.scss'
-import AnimatedLetters from '../AnimatedLetters'
-import React, { useState, useEffect, useRef } from 'react'
-import emailjs from '@emailjs/browser'
-import Logo from '../Logo'
+import "../About/index.scss";
+import "./index.scss";
+import AnimatedLetters from "../AnimatedLetters";
+import React, { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import Logo from "../Logo";
 
 const Contact = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const titleArray = ['C', 'O', 'N', 'T', 'A', 'C', 'T', ' ', 'M', 'E']
+  const [letterClass, setLetterClass] = useState("text-animate");
+  const titleArray = ["C", "O", "N", "T", "A", "C", "T", " ", "M", "E"];
   useEffect(() => {
     async function check() {
       return setTimeout(() => {
-        setLetterClass('text-animate-hover')
-      }, 4000)
+        setLetterClass("text-animate-hover");
+      }, 4000);
     }
-    check()
-  }, [])
+    check();
+  }, []);
 
-  const form = useRef()
+  const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    emailjs.sendForm(service_esnt1ay, template_flcssgl, form.current, yBd4MW3F9_EgnlMlh).then(
-      (result) => {
-        alert(
-          'Message successfully sent!' +
-            '\nI will reply to your email as soon as possible. \nBest regards, \nŁukasz Wartałowicz'
-        )
-        window.location.reload(true)
-      },
-      () => {
-        alert('Failed to send the message, please try again')
-      }
-    )
-  }
+    emailjs
+      .sendForm(
+        "service_esnt1ey",
+        "template_flcssgl",
+        form.current,
+        "yBd4MW3F9_EgnlMlh"
+      )
+      .then(
+        (result) => {
+          alert(
+            "Message successfully sent!" +
+              "\nI will reply to your email as soon as possible. \nBest regards, \nŁukasz Wartałowicz"
+          );
+          window.location.reload(true);
+        },
+        () => {
+          alert("Failed to send the message, please try again");
+        }
+      );
+  };
 
   return (
     <>
@@ -93,18 +100,19 @@ const Contact = () => {
           <div className="contact-form">
             <center>
               <p className="contact-link">
-                My mail:{' '}
+                My mail:{" "}
                 <a
                   href="mailto:wartalowicz.lukasz.praca@gmail.com"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   wartalowicz.lukasz.praca@gmail.com
                 </a>
                 <br />
               </p>
               <p className="contact-link">
-                My phone number:{' '}
-                <a href="tel:+48600571533" target="_blank">
+                My phone number:{" "}
+                <a href="tel:+48600571533" target="_blank" rel="noreferrer">
                   +48600571533
                 </a>
               </p>
@@ -114,7 +122,7 @@ const Contact = () => {
       </div>
       <Logo />
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
