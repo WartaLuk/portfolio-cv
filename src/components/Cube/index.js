@@ -1,5 +1,5 @@
-import './index.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import "./index.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCss3Alt,
   faGitAlt,
@@ -7,7 +7,7 @@ import {
   faJs,
   faNodeJs,
   faReact,
-} from '@fortawesome/free-brands-svg-icons'
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Cube() {
   return (
@@ -33,5 +33,5 @@ export default function Cube() {
         </div>
       </div>
     </div>
-  )
+  );
 }

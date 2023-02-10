@@ -1,11 +1,11 @@
-import { Link, NavLink } from 'react-router-dom'
-import './index.scss'
-import LogoW from '../../assets/images/logo-w-color.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faHome } from '@fortawesome/free-solid-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { NavLink } from "react-router-dom";
+import "./index.scss";
+import LogoW from "../../assets/images/logo-w-color.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode, faHome } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Sidebar = () => (
   <div className="nav-bar">
@@ -42,11 +42,12 @@ const Sidebar = () => (
         className="github-link"
         href="https://github.com/WartaLuk"
         target="_blank"
+        rel="noreferrer"
       >
         <FontAwesomeIcon icon={faGithub} target="_blank" />
       </a>
     </nav>
   </div>
-)
+);
 
-export default Sidebar
+export default Sidebar;

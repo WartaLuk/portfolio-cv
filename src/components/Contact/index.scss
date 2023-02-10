@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 .contact-form {
   width: 60%;
@@ -32,7 +32,7 @@
         width: 70%;
         padding: 12px;
       }
-      input[type='submit'] {
+      input[type="submit"] {
         width: 167px;
         margin: 0;
         text-align: center;
@@ -66,7 +66,7 @@
   }
 }
 @media (max-height: 920px) {
-  input[type='submit'] {
+  input[type="submit"] {
     position: static;
   }
   .contact-link {

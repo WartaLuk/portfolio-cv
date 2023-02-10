@@ -1,37 +1,37 @@
-import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import './index.scss'
-import Logo from '../Logo/index.js'
-import AnimatedLetters from '../AnimatedLetters'
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import "./index.scss";
+import Logo from "../Logo/index.js";
+import AnimatedLetters from "../AnimatedLetters";
 
 const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const hiArray = ['H', 'e', 'l', 'l', 'o', ',']
-  const nameArray = ['L', 'u', 'k', 'a', 's', 'z']
+  const [letterClass, setLetterClass] = useState("text-animate");
+  const hiArray = ["H", "e", "l", "l", "o", ","];
+  const nameArray = ["L", "u", "k", "a", "s", "z"];
   const jobArray = [
-    'w',
-    'e',
-    'b',
-    '',
-    'd',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
-    'e',
-    'r',
-    '.',
-  ]
+    "w",
+    "e",
+    "b",
+    "",
+    "d",
+    "e",
+    "v",
+    "e",
+    "l",
+    "o",
+    "p",
+    "e",
+    "r",
+    ".",
+  ];
   useEffect(() => {
     async function check() {
       return setTimeout(() => {
-        setLetterClass('text-animate-hover')
-      }, 4000)
+        setLetterClass("text-animate-hover");
+      }, 4000);
     }
-    check()
-  }, [])
+    check();
+  }, []);
   return (
     <>
       <div className="container home-page">
@@ -61,7 +61,10 @@ const Home = () => {
               />
             </h1>
             <div className="typewriter job">
-              <h2>Frontend Developer /<br className='phone-media'/> Javascript Junior</h2>
+              <h2>
+                Frontend Developer /<br className="phone-media" /> Javascript
+                Junior
+              </h2>
             </div>
 
             <Link to="/contact" className="flat-button">
@@ -72,7 +75,7 @@ const Home = () => {
       </div>
       <Logo />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

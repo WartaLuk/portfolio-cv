@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 .home-page {
   .text-zone {
     position: absolute;
@@ -14,7 +14,7 @@
       .surname {
         color: $element-color-four;
         padding-left: 5px;
-        font-family: 'Helvetica';
+        font-family: "Helvetica";
         border-style: solid none solid solid;
         border-radius: 50%;
         border-width: 3px 0 3px 5px;
@@ -28,7 +28,7 @@
           transition: easy-out;
         }
         &:hover::after {
-          content: 'artałowicz';
+          content: "artałowicz";
         }
       }
     }
@@ -40,7 +40,7 @@ h2 {
   margin-top: 20px;
   font-weight: 400;
   font-size: 16px;
-  font-family: 'Helvetica';
+  font-family: "Helvetica";
   letter-spacing: 4px;
   animation: fadeIn 1s 2s backwards;
   &:hover {
@@ -62,7 +62,7 @@ h2 {
   }
 }
 
-@media  (max-height: 920px) {
+@media (max-height: 920px) {
   .flat-button {
     position: absolute;
     top: 120%;

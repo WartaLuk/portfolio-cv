@@ -1,21 +1,21 @@
-import './index.scss'
-import AnimatedLetters from '../AnimatedLetters/index.js'
-import { useState, useEffect } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faMale } from '@fortawesome/free-solid-svg-icons'
-import Cube from '../Cube'
+import "./index.scss";
+import AnimatedLetters from "../AnimatedLetters/index.js";
+import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode, faMale } from "@fortawesome/free-solid-svg-icons";
+import Cube from "../Cube";
 
 const Skills = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const titleArray = ['M', 'Y', '', 'S', 'K', 'i', 'L', 'L', ' S']
+  const [letterClass, setLetterClass] = useState("text-animate");
+  const titleArray = ["M", "Y", "", "S", "K", "i", "L", "L", " S"];
   useEffect(() => {
     async function check() {
       return setTimeout(() => {
-        setLetterClass('text-animate-hover')
-      }, 4000)
+        setLetterClass("text-animate-hover");
+      }, 4000);
     }
-    check()
-  }, [])
+    check();
+  }, []);
   return (
     <>
       <div className="skills-page">
@@ -29,7 +29,7 @@ const Skills = () => {
         <div className="text-zone">
           <div className="part">
             <h4>
-              JavaScript{' '}
+              JavaScript{" "}
               <FontAwesomeIcon icon={faCode} color="&element-color-two" />
             </h4>
             <div>
@@ -43,7 +43,7 @@ const Skills = () => {
           </div>
           <div className="part">
             <h4>
-              HTML & CSS{' '}
+              HTML & CSS{" "}
               <FontAwesomeIcon icon={faCode} color="&element-color-two" />
             </h4>
             <div>
@@ -53,7 +53,7 @@ const Skills = () => {
           </div>
           <div className="part">
             <h4>
-              Soft skills{' '}
+              Soft skills{" "}
               <FontAwesomeIcon icon={faMale} color="&element-color-two" />
             </h4>
             <div>
@@ -61,14 +61,14 @@ const Skills = () => {
               <p>communicativeness</p>
               <p>analytical thinking</p>
               <p>adaptability</p>
+            </div>
           </div>
-        </div>
           <div className="part portfolio"></div>
+        </div>
       </div>
-      </div>
-      <Cube/>
+      <Cube />
     </>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

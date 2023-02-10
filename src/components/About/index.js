@@ -1,19 +1,19 @@
-import './index.scss'
-import AnimatedLetters from '../AnimatedLetters/index.js'
-import { useState, useEffect } from 'react'
-import Logo from '../Logo'
+import "./index.scss";
+import AnimatedLetters from "../AnimatedLetters/index.js";
+import { useState, useEffect } from "react";
+import Logo from "../Logo";
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const titleArray = ['A', 'B', 'O', 'U', 'T', ' ', 'M', 'E']
+  const [letterClass, setLetterClass] = useState("text-animate");
+  const titleArray = ["A", "B", "O", "U", "T", " ", "M", "E"];
   useEffect(() => {
     async function check() {
       return setTimeout(() => {
-        setLetterClass('text-animate-hover')
-      }, 4000)
+        setLetterClass("text-animate-hover");
+      }, 4000);
     }
-    check()
-  }, [])
+    check();
+  }, []);
   return (
     <div className="scroll">
       <div className="container about-page">
@@ -29,10 +29,10 @@ const About = () => {
           <div className="about-me">
             <p>
               I am 24 years old and I would like to start by saying that I am a
-              versatile person. The proof of this may be that I graduated
-              from a chemical technical school, during which I took part in an
-              Erasmus exchange three times, including one internship in a
-              microbiology laboratory in Sevilla.
+              versatile person. The proof of this may be that I graduated from a
+              chemical technical school, during which I took part in an Erasmus
+              exchange three times, including one internship in a microbiology
+              laboratory in Sevilla.
             </p>
             <p>
               After graduating from high school in mathematics, biology and
@@ -58,17 +58,17 @@ const About = () => {
               satisfaction from working with passion.
             </p>
             <p>
-              I encourage you to check out my work:{' '}
+              I encourage you to check out my work:{" "}
               <p>
                 <a
                   href="https://github.com/WartaLuk/New-Wave-Festival"
                   target="_blank"
                 >
                   New Wave Festival
-                </a>{' '}
+                </a>{" "}
                 <a href=" https://github.com/WartaLuk/BlogAPP" target="_blank">
                   Blog application
-                </a>{' '}
+                </a>{" "}
                 <a
                   href="https://github.com/WartaLuk/project-pizzeria"
                   target="_blank"
@@ -85,7 +85,7 @@ const About = () => {
       </div>
       <Logo />
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
