@@ -112,7 +112,7 @@ const Contact = () => {
               </p>
               <p className="contact-link">
                 My phone number:{" "}
-                <a href="tel:+48600571533" target="_blank" rel="noreferrer">
+                <a href="tel:+48600571533" target="_self" rel="noreferrer">
                   +48600571533
                 </a>
               </p>

@@ -63,15 +63,21 @@ const About = () => {
                 <a
                   href="https://github.com/WartaLuk/New-Wave-Festival"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   New Wave Festival
                 </a>{" "}
-                <a href=" https://github.com/WartaLuk/BlogAPP" target="_blank">
+                <a
+                  href=" https://github.com/WartaLuk/BlogAPP"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Blog application
                 </a>{" "}
                 <a
                   href="https://github.com/WartaLuk/project-pizzeria"
-                  target="_blank"
+                  target="_blank "
+                  rel="noreferrer"
                 >
                   Pizzeria Website
                 </a>
