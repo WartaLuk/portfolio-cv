@@ -65,3 +65,8 @@
     font-style: italic;
   }
 }
+@media (max-height: 920px) {
+  input[type='submit'] {
+    position: static;
+  }
+}

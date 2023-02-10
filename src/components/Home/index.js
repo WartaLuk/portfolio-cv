@@ -61,7 +61,7 @@ const Home = () => {
               />
             </h1>
             <div className="typewriter job">
-              <h2>Frontend Developer / Javascript Junior</h2>
+              <h2>Frontend Developer /<br className='phone-media'/> Javascript Junior</h2>
             </div>
 
             <Link to="/contact" className="flat-button">

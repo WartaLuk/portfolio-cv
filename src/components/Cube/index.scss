@@ -96,7 +96,13 @@
 
 @media (max-width: 1400px) {
   .stage-cube-cont {
-    display: none;
+    top: 130%;
+    left: 15%;
+  }
+}
+@media (max-width: 740px) {
+  .stage-cube-cont {
+    top: 200%;
   }
 }
 
