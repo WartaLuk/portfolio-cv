@@ -28,6 +28,14 @@
     }
   }
 }
+@media (max-width: 871) {
+  .text-zone {
+    left: 27%;
+    .part {
+      margin-left: 5px;
+    }
+  }
+}
 
 @keyframes sideAnimation {
   0% {
