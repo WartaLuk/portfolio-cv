@@ -1,0 +1,75 @@
+@import "../../../variables.scss";
+.home-page {
+  .text-zone {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    max-height: 90%;
+    h1 {
+      span span:hover {
+        color: $element-color-three;
+      }
+      .surname {
+        color: $element-color-four;
+        padding-left: 5px;
+        font-family: "Helvetica";
+        border-style: solid none solid solid;
+        border-radius: 50%;
+        border-width: 3px 0 3px 5px;
+        animation-delay: 1.6s;
+        animation-name: blink;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+
+        &:after {
+          transition: easy-out;
+        }
+        &:hover::after {
+          content: "artałowicz";
+        }
+      }
+    }
+  }
+}
+
+h2 {
+  color: $main-text-color;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Helvetica";
+  letter-spacing: 4px;
+  animation: fadeIn 1s 2s backwards;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.job {
+  max-width: fit-content;
+  margin: 16px 0 0 0;
+}
+.phone-media {
+  display: none;
+}
+
+@media (max-width: 426px) {
+  .phone-media {
+    display: block;
+  }
+}
+
+@media (max-height: 920px) {
+  .flat-button {
+    position: absolute;
+    top: 120%;
+  }
+}
+@media (max-width: 376px) {
+  .job {
+    display: flex;
+  }
+}

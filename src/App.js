@@ -1,10 +1,10 @@
 import "./App.scss";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Layout from "./components/Layout";
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Skills from "./components/Skills";
+import Layout from "./components/Common/Layout/Layout";
+import Home from "./components/Pages/Home/Home";
+import About from "./components/Pages/About/About";
+import Contact from "./components/Pages/Contact/Contact";
+import Skills from "./components/Pages/Skills/Skills";
 
 function App() {
   return (
