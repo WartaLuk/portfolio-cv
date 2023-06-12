@@ -1,0 +1,61 @@
+@import "./variables.scss";
+@keyframes blink {
+  70% {
+    box-shadow: none;
+  }
+  80% {
+    box-shadow: 0 0 12px hsl(180, 100%, 51%);
+  }
+  90% {
+    box-shadow: 0 0 6px hsl(180, 100%, 51%);
+  }
+  100% {
+    box-shadow: 0 0 1px hsl(180, 100%, 51%);
+  }
+}
+
+@keyframes typing {
+  0% {
+    max-width: 0%;
+    opacity: 0;
+    color: hsl(15, 100%, 60%);
+  }
+  5% {
+    opacity: 1;
+  }
+  35% {
+    color: $main-text-color;
+  }
+  50% {
+    max-width: 100%;
+  }
+  99% {
+    max-width: 100%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: hsl(314, 100%, 51%);
+  }
+}
+@keyframes sideAnimation {
+  0% {
+    opacity: 0;
+    font-size: 1;
+    left: 0;
+    text-shadow: $element-color-semi-three 0 0 60px;
+  }
+  100% {
+    opacity: 1;
+    font-size: initial;
+  }
+}
